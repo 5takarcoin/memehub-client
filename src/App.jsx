@@ -7,7 +7,7 @@ const App = () => {
   return (
     <div className="flex gap-4 w-full">
       <LeftBar />
-      <div className="bg-red-200 flex-1 mr-4">
+      <div className="flex-1 mr-4">
         <TopBar />
         <Gallery />
       </div>
