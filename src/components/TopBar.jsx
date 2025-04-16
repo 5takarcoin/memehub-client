@@ -1,10 +1,11 @@
+import Image from "./Image";
 import UserButton from "./UserButton";
 
 function TopBar() {
   return (
     <div className=" my-4 flex items-center gap-4">
       <div className="flex-1 bg-[#f1f1f1] rounded-2xl p-4 flex items-center gap-4">
-        <img src="/general/search.svg" />
+        <Image path="/general/search.svg" />
         <input
           type="text"
           placeholder="Search"

@@ -1,8 +1,11 @@
 import { useState } from "react";
 import { Link } from "react-router";
+import Image from "./Image";
 
 function GalleryItem({ item }) {
   const [hovering, setHovering] = useState(false);
+
+  const optHeight = (540 * item.height) / item.width;
   return (
     <div
       onMouseEnter={() => setHovering(true)}
@@ -10,10 +13,11 @@ function GalleryItem({ item }) {
       className="flex relative"
       style={{ gridRowEnd: `span ${Math.ceil(item.height / 100)}` }}
     >
-      <img
+      <Image
+        path={item.media}
         className="rounded-2xl w-full object-cover"
-        src={item.media}
-        alt="item"
+        width={540}
+        height={optHeight}
       />
       <Link
         className={`${
@@ -34,10 +38,10 @@ function GalleryItem({ item }) {
         } absolute bottom-4 right-4 flex items-center gap-2`}
       >
         <button className="w-8 h-8 rounded-full bg-white flex items-center justify-center border-none cursor-pointer hover:bg-[#f1f1f1]">
-          <img className="h-5 w-5" src="/general/share.svg" alt="" />
+          <Image className="h-5 w-5" path="/general/share.svg" alt="" />
         </button>
         <button className="w-8 h-8 rounded-full bg-white flex items-center justify-center border-none cursor-pointer hover:bg-[#f1f1f1]">
-          <img className="h-5 w-5" src="/general/more.svg" alt="" />
+          <Image className="h-5 w-5" path="/general/more.svg" alt="" />
         </button>
       </div>
     </div>
