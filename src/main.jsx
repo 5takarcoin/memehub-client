@@ -7,8 +7,8 @@ import Createpage from "./routes/Createpage.jsx";
 import Postpage from "./routes/Postpage.jsx";
 import Authpage from "./routes/Authpage.jsx";
 import Searchpage from "./routes/Searchpage.jsx";
-import Userprofile from "./routes/Userprofile.jsx";
 import MainLayout from "./layouts/MainLayout.jsx";
+import ProfilePage from "./routes/ProfilePage.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -18,7 +18,7 @@ createRoot(document.getElementById("root")).render(
           <Route path="/" element={<Homepage />} />
           <Route path="/create" element={<Createpage />} />
           <Route path="/pin/:id" element={<Postpage />} />
-          <Route path="/:username" element={<Userprofile />} />
+          <Route path="/:username" element={<ProfilePage />} />
           <Route path="/search" element={<Searchpage />} />
         </Route>
         <Route path="/auth" element={<Authpage />} />

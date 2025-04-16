@@ -1,8 +1,16 @@
 import { IKImage } from "imagekitio-react";
 
-export default function Image({ path, alt, className, width, height }) {
+export default function Image({
+  onClick,
+  path,
+  alt,
+  className,
+  width,
+  height,
+}) {
   return (
     <IKImage
+      onClick={onClick}
       urlEndpoint={import.meta.env.VITE_URL_IK_ENDPOINT}
       className={className}
       path={path}
